@@ -23,7 +23,7 @@ public class Arkanoid extends GraphicsProgram {
 		creaPiramide();
 		while (true){
 			bola1.muevete(this); //paso el objeto arkanoid que se está ejecutando
-			pause(10);
+			pause(1);
 			miCursor.muevete(getWidth(), (int) bola1.getX());
 		}
 	}
