@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 
 import acm.graphics.GImage;
+import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class Arkanoid extends GraphicsProgram {
@@ -16,13 +17,16 @@ public class Arkanoid extends GraphicsProgram {
 	Cursor miCursor = new Cursor(0, 400, 60, 10, Color.GREEN);
 	
 	GImage fondo = new GImage("imagenes/fondo.png");
+	GRect fondoMarcador = new GRect(300, 600);
 	
 	public void init(){
+		fondoMarcador.setFilled(true);
+		add(fondoMarcador, ANCHO_PANTALLA- 30,0);
 		add(fondo);
 		addMouseListeners();
 		add(bola1, 50, 100);
 		add(miCursor);
-		setSize(ANCHO_PANTALLA,500);
+		setSize(ANCHO_PANTALLA + 300 ,500);
 	}
 	
 	public void run(){
