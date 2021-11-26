@@ -18,6 +18,7 @@ public class Arkanoid extends GraphicsProgram {
 	
 	GImage fondo = new GImage("imagenes/fondo.png");
 	GRect fondoMarcador = new GRect(300, 600);
+	Marcador miMarcador = new Marcador(20, 40);
 	
 	public void init(){
 		fondoMarcador.setFilled(true);
@@ -31,6 +32,7 @@ public class Arkanoid extends GraphicsProgram {
 	
 	public void run(){
 		creaPiramide();
+		miMarcador.addMarcador(this);
 		while (true){
 			bola1.muevete(this); //paso el objeto arkanoid que se está ejecutando
 			pause(10);
