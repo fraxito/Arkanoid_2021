@@ -53,13 +53,11 @@ public class Arkanoid extends GraphicsProgram {
 		
 		for (int j=0; j<numeroLadrillos; j++){
 			for (int i=j; i<numeroLadrillos; i++){
-				Ladrillo miLadrillo = new Ladrillo(
-						ANCHO_LADRILLO*i - ANCHO_LADRILLO/2*j + desplazamiento_inicial_X, //pos X
-						ALTO_LADRILLO*j + desplazamiento_inicial_Y,  //pos Y
-						ANCHO_LADRILLO, //ancho
-						ALTO_LADRILLO, // alto
-						Color.BLUE);
-				add(miLadrillo);
+				Ladrillo3 miLadrillo = new Ladrillo3("imagenes/ladrillo1.png");
+
+				add(miLadrillo
+					,ANCHO_LADRILLO*i - ANCHO_LADRILLO/2*j + desplazamiento_inicial_X
+					,ALTO_LADRILLO*j + desplazamiento_inicial_Y );
 			}
 		}
 	}

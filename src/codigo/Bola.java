@@ -56,7 +56,7 @@ public class Bola extends GOval{
 			noHaChocado = false;
 		}else if (auxiliar == null){ //si vale null es que no había nada ahi
 			
-		}else if (auxiliar instanceof Ladrillo){ //si es un ladrillo
+		}else if (auxiliar instanceof Ladrillo3){ //si es un ladrillo
 			if (auxiliar.getX() + getWidth() >= posx || auxiliar.getX() <= posx){
 				dx = dx * -1;
 			}
